@@ -1,0 +1,44 @@
+.addNew {
+	min-height: 100px;
+	width: 90%;
+	margin: 40px auto;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	gap:20px;
+
+}
+.inp {
+	height: 50px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 70%;
+}
+.inp input {
+	height: 100%;
+	font-size: 1rem;
+	border-radius: 200vmax;
+	padding:0 20px 0 20px;
+	border: none;
+	width: 100%;
+	background-color: var(--yellow);
+	color: var(--blue);
+}
+.btn button {
+	min-width: 100px;
+	border: none;
+	height: 40px;
+	font-size: 1rem;
+	cursor: pointer;
+	border-radius: 200vmax;
+}
+
+@media only screen and (max-width: 576px){
+	.addNew{
+		flex-direction: column;
+	}
+	.inp{
+		width: 100%;
+	}
+}
