@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from './NavBar'
 import AddNew from './AddNew';
+import bgImg from '../public/graph-dark.svg'
 import {useState} from 'react';
 import { useEffect} from 'react';
 import { TaskContractAddress } from './config.js';

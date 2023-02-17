@@ -89,7 +89,7 @@ const NavBar = () => {
     <>
       <div id="nav" className="flex navMain">
         <div className="flex logo">
-          <h2>AdBid</h2>
+          <h2><span className="ad">Ad</span>Bid</h2>
         </div>
         <div className="flex account">
           <div className="flex connect">
