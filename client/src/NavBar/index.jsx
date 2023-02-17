@@ -3,6 +3,7 @@ import "./NavBar.css";
 import { ethers } from "ethers";
 import { UserContext } from "../userContext";
 import { useEffect, useState, useCallback, useContext } from "react";
+import { Link } from "react-router-dom";
 const NavBar = () => {
   let [accountChanged, setAccChange] = useState(true);
   const [currentAccount, setCurrentAccount] = useState("");
@@ -89,9 +90,11 @@ const NavBar = () => {
     <>
       <div id="nav" className="flex navMain">
         <div className="flex logo">
-          <h2>
-            <span className="ad">Ad</span>Bid
-          </h2>
+          <Link to="/">
+            <h2>
+              <span className="ad">Ad</span>Bid
+            </h2>
+          </Link>{" "}
         </div>
         <div className="flex account">
           <div className="flex connect">
