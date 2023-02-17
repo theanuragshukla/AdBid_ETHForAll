@@ -1,18 +1,12 @@
 import React from "react";
 import "./Card.css";
 
-function Card() {
+function Card({ heading, children }) {
   return (
-    <>
-      <div className="Card">
-        <p className="heading">Contract Info</p>
-        <span className="list">
-          <li className="feild1">heyy : <span className="subFeild">heu</span></li>
-          <li className="feild1">heyy:<span className="subFeild">heu</span></li>
-          <li className="feild1">hryyyyy:<span className="subFeild">heu</span></li>
-        </span>
-      </div>
-    </>
+    <div className="Card">
+      <h2>#{heading}</h2>
+      {children}
+    </div>
   );
 }
 

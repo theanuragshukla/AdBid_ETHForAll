@@ -1,61 +1,90 @@
-.mainBody{
-    height: auto;
-    min-height: 100vh;
-    width: 100%;
-    /* border: 2px solid red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-
+.mainBody {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
-.Card{
-    height: 300px;
-    width:min(600px,90%);
-    /* min-width: 300px; */
-    /* border: 2px solid red; */
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 1px 5px 20px rgb(151, 151, 151);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    margin: 50px 50px;
-    /* position: relative; */
-    
-
-
+.Card {
+  width: min(600px, 90%);
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 1px 5px 20px rgb(151, 151, 151);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 50px 25px;
+  margin-top: 50px;
 }
-.heading{
-    font-size: 2.4rem;
+input {
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #2e3880;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
 }
-
-.list{
-    margin-top: -100px;
-
-    
-}
-
-li{
-    font-size: 1.5rem;
-    margin-left: 50px;
-    margin-top: 10px;
-
-}
-.subFeild{
-    color: #ff78cb;
+.list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
 }
 
-/***************************************/
-.bidInp{
-    height: 40px;
-    width:min(300px,90%);
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #2e3880;
-    color: white;
-    position: absolute;
-    
+.list p {
+  font-size: 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.key,
+.value {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  padding: 5px;
+}
 
+.key {
+  color: #2a337a;
+  border: 0px solid #2a337a;
+  border-right-width: 2px;
+  font-size: 1.2rem;
+}
+.bidBox {
+  width: 100%;
+  display: grid;
+  margin-top: 50px;
+  padding: 10px 0;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 10px;
+}
+
+input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bidBox button {
+  height: 100%;
+  background-color: rgb(46, 56, 128);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 660px) {
+  .list p {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-left: 2px solid var(--blue);
+  }
+  .key {
+    border: 0;
+  }
 }
