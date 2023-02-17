@@ -20,7 +20,7 @@ const NavBar = () => {
       let chainId = await ethereum.request({ method: "eth_chainId" });
       console.log("Connected to chain:" + chainId);
 
-      const goerliChainId = "0x5";
+      const goerliChainId = "0x13881";
 
       if (chainId !== goerliChainId) {
         alert("You are not connected to the goerli Testnet!");
