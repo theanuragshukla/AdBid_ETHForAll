@@ -3,20 +3,23 @@ import { Link } from "react-router-dom";
 import "./About.css";
 import NavBar from "./NavBar";
 const About = () => {
-  return (
-    <div className="flex AboutMain">
-      <NavBar />
-      <div className="flex section">
-        <div className="heading">
-          <h1>What is this ??</h1>
-        </div>
-        <div className="para">
-          <p>
-            In simplest terms, This is a Platform which supports bidding for an
-            AdSpace. The highest Bidder controls the contents of the AdSpace.
-            The Bidding is open Forever. At any point of time, the current
-            Highest Bidder can modify the content of the Adspace and any other
-            person can Claim the ownerShip of the AdSpace by bidding more than
+	return (
+		<div className="flex AboutMain">
+		<NavBar>
+		<button><Link to='/manage'>Manage</Link></button>
+		<button><Link to='/adspace'>AdSpace</Link></button>
+		</NavBar>
+		<div className="flex section">
+		<div className="heading">
+		<h1>What is this ??</h1>
+		</div>
+		<div className="para">
+		<p>
+		In simplest terms, This is a Platform which supports bidding for an
+		AdSpace. The highest Bidder controls the contents of the AdSpace.
+		The Bidding is open Forever. At any point of time, the current
+		Highest Bidder can modify the content of the Adspace and any other
+		person can Claim the ownerShip of the AdSpace by bidding more than
             the previous Highest Bid Amount(keeping GAS in consideration).
           </p>
         </div>
@@ -56,7 +59,29 @@ const About = () => {
           <h1>How this Works ??</h1>
         </div>
         <div className="para">
-          <p></p>
+          <p>
+            This platform utilises technologies like IPFS, Polygon, etc to
+            achieve its current working state. Here are some key Points
+            describing its working:
+            <ul>
+              <li>
+                It uses smart Contract deployed on the Polygon Network as the
+                only sosurce of truth.
+              </li>
+              <li>
+                It Uses Pinata's IPFS gateway to upload Content files to IPFS
+                and then update the CID in the Smart Contract using EthersJS.
+              </li>
+              <li>
+                It also uses EthersJS for accessing infos like price, current
+                bidder, current CID, etc from SmartContract.
+              </li>
+              <li>
+                Metamask browser extension is currently supported as the payment
+                technology
+              </li>
+            </ul>
+          </p>
         </div>
       </div>
       <div className="flex section">
@@ -108,7 +133,7 @@ const About = () => {
                 <Link to="/manage">Manage</Link>
               </li>
               <li>
-                <a href="https://github.com/theauragshukla/ETHForAll">
+                <a href="https://github.com/theanuragshukla/ETHForAll">
                   Github Repo
                 </a>
               </li>

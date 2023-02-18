@@ -27,7 +27,7 @@ button:hover {
 }
 body {
   background-color: var(--blue);
-  margin: 0 auto 100px auto;
+  margin: 0 auto 0 auto;
 }
 
 .flex {

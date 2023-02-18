@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 import { UserContext } from "../userContext";
 import { useEffect, useState, useCallback, useContext } from "react";
 import { Link } from "react-router-dom";
-const NavBar = () => {
+const NavBar = ({ children }) => {
   let [accountChanged, setAccChange] = useState(true);
   const [currentAccount, setCurrentAccount] = useState("");
   const [correctNetwork, setCorrectNetwork] = useState(false);
@@ -98,6 +98,7 @@ const NavBar = () => {
         </div>
         <div className="flex account">
           <div className="flex connect">
+            {children}
             <button onClick={user.connected ? () => {} : connectWallet}>
               {user.connected
                 ? `${user.address.toString().substring(0, 5)}...${user.address

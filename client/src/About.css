@@ -1,5 +1,6 @@
 .AboutMain {
   flex-direction: column;
+  padding-bottom: 50px;
 }
 .section {
   flex-direction: column;
@@ -28,11 +29,11 @@
 .section li {
   margin-top: 5px;
 }
-.strike {
+.section .strike {
   text-decoration: line-through;
   color: #f00;
 }
-a {
+.section a {
   color: #0ff;
   text-decoration: none;
 }
