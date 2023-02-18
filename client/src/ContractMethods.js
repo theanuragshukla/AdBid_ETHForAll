@@ -4,26 +4,19 @@ import TaskAbi from "./utils/AdBidContract.json";
 
 const getContractData = async ({ setData }) => {
   try {
-    const { ethereum } = window;
-    if (ethereum) {
-      const provider = new ethers.providers.Web3Provider(
-        window.ethereum,
-        "any"
-      );
-      const signer = provider.getSigner();
-      const TaskContract = new ethers.Contract(
-        TaskContractAddress,
-        TaskAbi.abi,
-        signer
-      );
-      const cid = await TaskContract.getCid();
-      const owner = await TaskContract.tempOwner();
-      const price = await TaskContract.price();
+    const provider = new ethers.providers.JsonRpcProvider(
+      "https://matic-mumbai.chainstacklabs.com/"
+    );
+    const TaskContract = new ethers.Contract(
+      TaskContractAddress,
+      TaskAbi.abi,
+      provider
+    );
+    const cid = await TaskContract.getCid();
+    const owner = await TaskContract.tempOwner();
+    const price = await TaskContract.price();
 
-      setData({ cid, owner, price });
-    } else {
-      console.log("Ethereum object doesn't exist");
-    }
+    setData({ cid, owner, price });
   } catch (error) {
     console.log(error);
   }
@@ -35,10 +28,7 @@ const setCid = async ({ user, newCid }) => {
     const { ethereum } = window;
 
     if (ethereum) {
-      const provider = new ethers.providers.Web3Provider(
-        window.ethereum,
-        "any"
-      );
+      const provider = new ethers.providers.Web3Provider(ethereum, "any");
       const signer = provider.getSigner();
       const TaskContract = new ethers.Contract(
         TaskContractAddress,
@@ -51,7 +41,7 @@ const setCid = async ({ user, newCid }) => {
         alert("error message");
         return;
       } else {
-        alert("done");
+        alert("done! content updated");
       }
     } else {
       console.log("Ethereum object doesn't exist");
@@ -67,10 +57,7 @@ const bid = async ({ user, price }) => {
     const { ethereum } = window;
 
     if (ethereum) {
-      const provider = new ethers.providers.Web3Provider(
-        window.ethereum,
-        "any"
-      );
+      const provider = new ethers.providers.Web3Provider(ethereum, "any");
       const signer = provider.getSigner();
       const TaskContract = new ethers.Contract(
         TaskContractAddress,
@@ -85,7 +72,7 @@ const bid = async ({ user, price }) => {
         alert("error message");
         return;
       } else {
-        alert("done");
+        alert("done! transaction successfull");
       }
     } else {
       console.log("Ethereum object doesn't exist");

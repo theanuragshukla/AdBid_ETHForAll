@@ -21,10 +21,10 @@ const NavBar = () => {
       let chainId = await ethereum.request({ method: "eth_chainId" });
       console.log("Connected to chain:" + chainId);
 
-      const goerliChainId = "0x13881";
+      const PolygonChainId = "0x13881";
 
-      if (chainId !== goerliChainId) {
-        alert("You are not connected to the goerli Testnet!");
+      if (chainId !== PolygonChainId) {
+        alert("You are not connected to the Polygon Testnet!");
         return;
       } else {
         setCorrectNetwork(true);

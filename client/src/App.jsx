@@ -4,6 +4,7 @@ import {UserContext} from './userContext'
 import {Route, Routes} from 'react-router-dom';
 import DashBoard from './DashBoard';
 import Homepage from './Homepage'
+import About from './About'
 function App() {
 
 	const [user, setUser] = useState({
@@ -17,6 +18,7 @@ function App() {
 		<Routes>
 		<Route path='/' element={<Homepage/>}/>
 		<Route path='/manage' element={<DashBoard/>}/>
+		<Route path='/about' element={<About/>}/>
 		</Routes>
 		</div>
 		</UserContext.Provider>

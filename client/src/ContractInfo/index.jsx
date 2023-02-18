@@ -76,48 +76,51 @@ const ContractInfo = ({ user, data, update }) => {
             </p>
             <p>
               <span className="key"># Current CID</span>
-              <span className="value">
-                {data.cid || "Metamask not Connected"}
-              </span>
+              <span className="value">{data.cid || "getting data..."}</span>
             </p>
 
             <p>
               <span className="key"># Current Bidder</span>
-              <span className="value">
-                {data.owner || "Metamask not Connected"}
-              </span>
+              <span className="value">{data.owner || "getting data..."}</span>
             </p>
             <p>
               <span className="key"># Last Bid Amount</span>
               <span className="value">
-                {(data.price && data.price.toString()) ||
-                  "Metamask not Connected"}
+                {(data.price && data.price.toString()) || "getting data..."}
               </span>
             </p>
           </div>
-          {!isOwner ? (
+          {user.connected ? (
             <div className="bidBox">
-              <input
-                type="number"
-                name="amount"
-                value={amt}
-                onChange={changeAmount}
-                placeholder="Enter Bid Amount"
-              />
-              <button onClick={HandleBid}>
-                {loading ? "wait..." : "Confirm"}
-              </button>
+              {!isOwner ? (
+                <>
+                  <input
+                    type="number"
+                    name="amount"
+                    value={amt}
+                    onChange={changeAmount}
+                    placeholder="Enter Bid Amount"
+                  />
+                  <button onClick={HandleBid}>
+                    {loading ? "wait..." : "Confirm"}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <input
+                    type="file"
+                    name="file"
+                    id="amount"
+                    onChange={handleFileChange}
+                  />
+                  <button onClick={handleUpload}>{uploadStatus}</button>
+                </>
+              )}
             </div>
           ) : (
-            <div className="bidBox">
-              <input
-                type="file"
-                name="file"
-                id="amount"
-                onChange={handleFileChange}
-              />
-              <button onClick={handleUpload}>{uploadStatus}</button>
-            </div>
+            <center>
+              <h3>Connect your Wallet for taking furthur actions</h3>
+            </center>
           )}
         </Card>
       </div>
