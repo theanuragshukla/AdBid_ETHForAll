@@ -24,6 +24,7 @@ button {
 }
 button:hover {
   color: var(--pink);
+  background-color: var(--yellow);
 }
 body {
   background-color: var(--blue);
