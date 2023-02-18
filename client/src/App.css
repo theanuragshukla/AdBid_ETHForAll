@@ -10,7 +10,8 @@
 :root {
   --yellow: blanchedalmond;
   --blue: #2e3880;
-  --pink: #00ffff;
+  /* --pink: #00ffff; */
+  --pink:#ff2fff;
 }
 html {
   font-size: 16px;
