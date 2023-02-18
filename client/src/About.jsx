@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./About.css";
 import NavBar from "./NavBar";
 const About = () => {
@@ -11,29 +12,42 @@ const About = () => {
         </div>
         <div className="para">
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-            delectus mollitia sequi voluptatum repudiandae exercitationem fugit
-            nulla architecto id voluptas a minima doloribus, similique labore
-            tenetur eveniet, modi et porro! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Praesentium vel eum iste sint debitis
-            quia ullam a esse similique rem animi non facilis, cupiditate natus?
-            Pariatur quos delectus est corrupti?
+            In simplest terms, This is a Platform which supports bidding for an
+            AdSpace. The highest Bidder controls the contents of the AdSpace.
+            The Bidding is open Forever. At any point of time, the current
+            Highest Bidder can modify the content of the Adspace and any other
+            person can Claim the ownerShip of the AdSpace by bidding more than
+            the previous Highest Bid Amount(keeping GAS in consideration).
           </p>
         </div>
-      </div>{" "}
+      </div>
       <div className="flex section">
         <div className="heading">
           <h1>How to Use ??</h1>
         </div>
         <div className="para">
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-            delectus mollitia sequi voluptatum repudiandae exercitationem fugit
-            nulla architecto id voluptas a minima doloribus, similique labore
-            tenetur eveniet, modi et porro! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Praesentium vel eum iste sint debitis
-            quia ullam a esse similique rem animi non facilis, cupiditate natus?
-            Pariatur quos delectus est corrupti?
+            <ul>
+              <li>
+                Navigate to <Link to="/manage">/manage</Link> and then Connect
+                your MetaMask wallet
+              </li>
+              <li>
+                On that page, You may see different UI depending you are the
+                current Highest Bidder or not.
+              </li>
+              <li>
+                If you are the Current Highest Bidder, You'll see the Option for
+                changing the content of AdSpace. You may Upload any Image/HTML
+                file to replace the current content of AdSpace
+              </li>
+              <li>
+                In any other Situation, You'll find an option to bid an amount
+                to claim the ownerShip of the AdSpace. You have to enter the
+                Amount you want to bid and the Press Enter. If the transaction
+                Succeed, you'll be able to change the AdSpace content
+              </li>
+            </ul>
           </p>
         </div>
       </div>
@@ -42,30 +56,9 @@ const About = () => {
           <h1>How this Works ??</h1>
         </div>
         <div className="para">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-            delectus mollitia sequi voluptatum repudiandae exercitationem fugit
-            nulla architecto id voluptas a minima doloribus, similique labore
-            tenetur eveniet, modi et porro! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Praesentium vel eum iste sint debitis
-            quia ullam a esse similique rem animi non facilis, cupiditate natus?
-            Pariatur quos delectus est corrupti?
-            <ul>
-              <li>
-                sdnfali Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Quae soluta explicabo tempora inventore cum mollitia enim
-                eum magni cumque eos rerum, ducimus odit. Rerum quis ducimus
-                veritatis obcaecati ipsa maiores!ewbfal
-              </li>
-              <li>sdnfaliewbfal</li>
-              <li>sdnfaliewbfal</li>
-              <li>sdnfaliewbfal</li>
-              <li>sdnfaliewbfal</li>
-              <li>sdnfaliewbfal</li>
-            </ul>
-          </p>
+          <p></p>
         </div>
-      </div>{" "}
+      </div>
       <div className="flex section">
         <div className="heading">
           <h1>Who built this ??</h1>
@@ -74,6 +67,7 @@ const About = () => {
           <p>
             This was built by <span className="strike">two</span> 3 Students
             during the Hackathon <span className="bold">ETHForAll 2023</span>.
+            Here are the links to their profiles:
             <ul>
               <li>
                 <a href="https://theanuragshukla.github.io/portfolio">
@@ -93,7 +87,31 @@ const About = () => {
             </ul>
           </p>
         </div>
-      </div>{" "}
+      </div>
+      <div className="flex section">
+        <div className="heading">
+          <h1>Important links</h1>
+        </div>
+        <div className="para">
+          <p>
+            This project is completely OpenSource on Github. Here are few
+            Destinations you might want to visit:
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/manage">Manage</Link>
+              </li>
+              <li>
+                <a href="https://github.com/theauragshukla/ETHForAll">
+                  Github Repo
+                </a>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,9 @@
+.AboutMain {
+  flex-direction: column;
+}
 .section {
   flex-direction: column;
-  color: "#fff";
+  color: #fff;
   margin: 0 40px;
 }
 .heading {
@@ -15,19 +18,14 @@
   max-width: 600px;
 }
 
-h1,
-h2,
-p {
-  color: #fff;
-}
-p {
+.section p {
   line-height: 150%;
 }
-ul {
+.section ul {
   padding-left: 10px;
   margin: 5px 0;
 }
-li {
+.section li {
   margin-top: 5px;
 }
 .strike {
@@ -35,6 +33,6 @@ li {
   color: #f00;
 }
 a {
-  color: #fff;
+  color: #0ff;
   text-decoration: none;
 }
