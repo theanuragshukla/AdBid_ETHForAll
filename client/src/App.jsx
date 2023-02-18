@@ -16,9 +16,9 @@ function App() {
 		<UserContext.Provider value={{user, setUser}}>
 		<div className="App">
 		<Routes>
-		<Route path='/' element={<Homepage/>}/>
+		<Route path='/adspace' element={<Homepage/>}/>
 		<Route path='/manage' element={<DashBoard/>}/>
-		<Route path='/about' element={<About/>}/>
+		<Route path='/' element={<About/>}/>
 		</Routes>
 		</div>
 		</UserContext.Provider>

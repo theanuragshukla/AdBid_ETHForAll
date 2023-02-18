@@ -1,0 +1,8 @@
+iframe {
+  max-width: 9000px !important;
+}
+
+.homeMain img {
+  width: 100%;
+  height: auto;
+}

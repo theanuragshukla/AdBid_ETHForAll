@@ -101,6 +101,10 @@ const About = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
+                <Link to="/adspace">AdSpace</Link>
+              </li>
+
+              <li>
                 <Link to="/manage">Manage</Link>
               </li>
               <li>
