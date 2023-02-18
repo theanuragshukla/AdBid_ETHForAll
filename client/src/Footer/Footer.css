@@ -1,0 +1,30 @@
+.main{
+    height: 150px;
+    min-height: auto;
+    width: 100vw;
+    border-top: 10px solid var(--yellow);
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+.logo{
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--yellow);
+}
+.logo span{
+    color: var(--pink);
+}
+.buttons{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+.btn{
+    margin: 0 10px 0 10px;
+}
