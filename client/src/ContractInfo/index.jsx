@@ -82,41 +82,44 @@ const ContractInfo = ({ user, data, update }) => {
             <p>
               <span className="key"># Current Bidder</span>
               <span className="value">{data.owner || "getting data..."}</span>
-            </p>
-            <p>
-              <span className="key"># Last Bid Amount</span>
-              <span className="value">
-                {(data.price && data.price.toString()) || "getting data..."}
-              </span>
-            </p>
-          </div>
-          {user.connected ? (
-            <div className="bidBox">
-              {!isOwner ? (
-                <>
-                  <input
-                    type="number"
-                    name="amount"
-                    value={amt}
-                    onChange={changeAmount}
-                    placeholder="Enter Bid Amount"
-                  />
-                  <button onClick={HandleBid}>
-                    {loading ? "wait..." : "Confirm"}
-                  </button>
-                </>
-              ) : (
-                <>
-                  <input
-                    type="file"
-                    name="file"
-                    id="amount"
-                    onChange={handleFileChange}
-                  />
-                  <button onClick={handleUpload}>{uploadStatus}</button>
-                </>
-              )}
-            </div>
+	  </p>
+	  <p>
+	  <span className="key"># Last Bid Amount</span>
+	  <span className="value">
+	  {(data.price && data.price.toString()+" wei") || "getting data..."}
+	  </span>
+	  </p>
+	  </div>
+	  {user.connected ? (
+		  <>
+		  <h3>{isOwner ? "Change AdSpace Content" : "Buy the AdSpace"}</h3>
+              <div className="bidBox">
+                {!isOwner ? (
+                  <>
+                    <input
+                      type="number"
+                      name="amount"
+                      value={amt}
+                      onChange={changeAmount}
+                      placeholder="Enter Bid Amount"
+                    />
+                    <button onClick={HandleBid}>
+                      {loading ? "wait..." : "Confirm"}
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <input
+                      type="file"
+                      name="file"
+                      id="amount"
+                      onChange={handleFileChange}
+                    />
+                    <button onClick={handleUpload}>{uploadStatus}</button>
+                  </>
+                )}
+              </div>
+            </>
           ) : (
             <center>
               <h3>Connect your Wallet for taking furthur actions</h3>

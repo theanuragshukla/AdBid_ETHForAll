@@ -19,6 +19,7 @@ const Homepage = () => {
 				`https://ipfs.io/ipfs/${data.cid}`
 			);
 			setMime(response.headers.get("content-type"));
+			console.log(mime)
 			const html = await response.text();
 			const clean = DOMPurify.sanitize(html, { USE_PROFILES: { html: true } } );
 			console.log(clean)
